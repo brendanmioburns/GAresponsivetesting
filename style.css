@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  /*Caps it at 900 pixels*/
+  max-width: 900px;
+  border: #000 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.col-4, .col-6 {
+  float: left;
+  box-sizing: border-box;
+  border: #000 1px solid;
+}
+
+.col-6 {
+  width: 50%;
+  /*min-width: 400px;*/
+}
+
+.col-4 {
+  width: 33.333333333%;
+  /*min-width: 300px;*/
+}
+
+.desktop-nav, .mobile-nav {
+  padding: 20px;
+  text-align: center;
+}
+
+.desktop-nav {
+  background-color: blue;
+}
+
+.mobile-nav {
+  background-color: red;
+  display: none;
+}
+
+/*reads from top to bottom in terms of overriding*/
+@media(max-width: 700px) {
+  .mobile-nav {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+}
+
+@media(max-width: 400px) {
+  .col-6, .col-4 {
+    width: 100%;
+  }
+}
+
+@media(min-width:500px) and (max-width:600px) {
+  body {
+    background-color: orange;
+  }
+}
